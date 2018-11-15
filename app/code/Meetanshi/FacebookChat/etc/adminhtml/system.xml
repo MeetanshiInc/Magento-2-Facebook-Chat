@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="meetanshi" translate="label" sortOrder="100">
+            <label><![CDATA[<img src="https://meetanshi.com/media/logo.png" alt="Meetanshi" height="20" style="vertical-align:middle;"/>]]></label>
+        </tab>
+        <section id="messenger" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Facebook Chat</label>
+            <tab>meetanshi</tab>
+            <resource>Meetanshi_FacebookChat::messenger_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook Chat</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="app_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook App ID</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Generate App Id using : <a href="https://developers.facebook.com/apps" target="_blank">https://developers.facebook.com/apps</a>]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="page_id" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook Page ID</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Generate Page Id : GoTo Page -> Setting -> Page info]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="color_option" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Theme Color</label>
+                    <frontend_model>Meetanshi\FacebookChat\Block\Color</frontend_model>
+                    <validate>color</validate>
+                    <comment><![CDATA[]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="login_message" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Login Greeting Text</label>
+                    <comment><![CDATA[]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="logout_message" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Logout Greeting Text</label>
+                    <comment><![CDATA[]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

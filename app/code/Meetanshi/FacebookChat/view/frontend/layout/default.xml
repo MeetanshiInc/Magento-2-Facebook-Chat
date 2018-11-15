@@ -1,0 +1,5 @@
+<referenceContainer name="footer-container">
+    <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
+<block class="Meetanshi\FacebookChat\Block\Messenger" name="custom_block" as="custom_block" template="Meetanshi_FacebookChat::messenger_script.phtml"/>
+    </container>
+</referenceContainer>
