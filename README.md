@@ -6,12 +6,12 @@ Improve communication with customers. Offer excellent live chat support via the 
 
 Offer improved customer experience with the help of the Facebook Messenger Live Support for Magento 2. Chat with your customers in their preferred platform, i.e., Facebook Messenger! With the friendly app for direct communication, build better customer relationship and earn their trust!
 
-Benefits of choosing Meetanshi's Magento 2 Facebook Chat extension:
-Direct communication with customers.
-Offer a quick solution to customers’ queries.
-Add Facebook App ID and Page ID to enable the messenger.
-Set theme color of the FB chat icon and chat window.
-Customize the message for the FB messenger login and logout greeting text.
-Allow customers to use their own Facebook account for contacting for the solution to their queries.
+## Benefits of choosing Meetanshi's Magento 2 Facebook Chat extension:
+* Direct communication with customers.
+* Offer a quick solution to customers’ queries.
+* Add Facebook App ID and Page ID to enable the messenger.
+* Set theme color of the FB chat icon and chat window.
+* Customize the message for the FB messenger login and logout greeting text.
+* Allow customers to use their own Facebook account for contacting for the solution to their queries.
 
 Visit, to know more: https://meetanshi.com/magento-2-facebook-chat.html
