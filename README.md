@@ -1,6 +1,6 @@
 # Magento 2 Facebook Chat
 
-Ever since Facebook has introduced its independent messaging app, i.e., Messenger, it has served an increasing number of people, reaching 1.3 billion users every month! It is beneficial to make the most out of such a popular messaging app in Magento 2 store. Meetanshi's Magento 2 Facebook Chat extension allows integrating messenger with Magento 2 for live chat support via messenger.
+Ever since Facebook has introduced its independent messaging app, i.e., Messenger, it has served an increasing number of people, reaching 1.3 billion users every month! It is beneficial to make the most out of such a popular messaging app in Magento 2 store. Meetanshi's ***Magento 2 Facebook Chat*** extension allows integrating messenger with Magento 2 for live chat support via messenger.
 
 Improve communication with customers. Offer excellent live chat support via the popular platform, i.e., Facebook. Solve customers’ queries quickly. Everything with Magento 2 Facebook Chat!
 
