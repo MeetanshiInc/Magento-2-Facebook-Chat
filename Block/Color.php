@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Provider: Meetanshi.
  * Package: Meetanshi Messenger
@@ -7,13 +8,28 @@
 
 namespace Meetanshi\FacebookChat\Block;
 
-use Magento\Config\Block\System\Config\Form\Field;
 use Magento\Backend\Block\Template\Context;
-use Magento\Framework\Registry;
+use Magento\Config\Block\System\Config\Form\Field;
 use Magento\Framework\Data\Form\Element\AbstractElement;
+use Magento\Framework\Registry;
 
-class Color extends Field {
+/**
+ * @SuppressWarnings(PHPMD.CamelCasePropertyName)
+ */
+class Color extends Field
+{
+    /**
+     * @var mixed
+     */
     protected $_coreRegistry;
+
+    /**
+     * Color constructor.
+     *
+     * @param Context $context
+     * @param Registry $coreRegistry
+     * @param array $data
+     */
     public function __construct(
         Context $context,
         Registry $coreRegistry,
@@ -22,9 +38,20 @@ class Color extends Field {
         $this->_coreRegistry = $coreRegistry;
         parent::__construct($context, $data);
     }
-    protected function _getElementHtml(AbstractElement $element) {
+
+    /**
+     * Get element HTML with color picker.
+     *
+     * @SuppressWarnings(PHPMD.CamelCaseMethodName)
+     *
+     * @param AbstractElement $element
+     *
+     * @return string
+     */
+    protected function _getElementHtml(AbstractElement $element)
+    {
         $html = $element->getElementHtml();
-        $cpPath=$this->getViewFileUrl('Meetanshi_FacebookChat::js');
+        $cpPath = $this->getViewFileUrl('Meetanshi_FacebookChat::js');
         if (!$this->_coreRegistry->registry('colorpicker_loaded')) {
             $html .= '<script type="text/javascript" src="' . $cpPath.'/'.'jscolor.js"></script>';
             $this->_coreRegistry->registry('colorpicker_loaded', 1);

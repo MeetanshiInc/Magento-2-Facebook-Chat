@@ -1,6 +1,6 @@
 <?php
 
-$helper = $this->helper('Meetanshi\FacebookChat\Helper\Data');
+$helper = $block->helper(\Meetanshi\FacebookChat\Helper\Data::class);
 
 $enable = $helper->isEnable();
 $appId = $helper->getFBAppId();
@@ -9,11 +9,11 @@ $color =  $helper->getFBColor();
 $loginText = $helper->getFBLoginText();
 $logoutText = $helper->getFBLogoutText();
 
-if($enable){
-    if (empty($loginText)){
+if ($enable) {
+    if (empty($loginText)) {
         $loginText = 'Hi! What can i Help you?';
     }
-    if (empty($logoutText)){
+    if (empty($logoutText)) {
         $logoutText = 'Hi! What can i Help you?';
     }
     ?>
@@ -22,7 +22,7 @@ if($enable){
     <script>
         window.fbAsyncInit = function() {
             FB.init({
-                appId            : '<?php echo $appId;?>',
+                appId            : '<?= $escaper->escapeJs($appId) ?>',
                 autoLogAppEvents : true,
                 xfbml            : true,
                 version          : 'v3.2'
@@ -40,11 +40,11 @@ if($enable){
 
     <div class="fb-customerchat"
          attribution=setup_tool
-         page_id="<?php echo $pageId;?>"
-         theme_color="<?php echo $color;?>"
-         logged_in_greeting="<?php echo $loginText;?>"
-         logged_out_greeting="<?php echo $logoutText;?>"
+         page_id="<?= $escaper->escapeHtmlAttr($pageId) ?>"
+         theme_color="<?= $escaper->escapeHtmlAttr($color) ?>"
+         logged_in_greeting="<?= $escaper->escapeHtmlAttr($loginText) ?>"
+         logged_out_greeting="<?= $escaper->escapeHtmlAttr($logoutText) ?>"
     </div>
-<?php
+    <?php
 }
 ?>

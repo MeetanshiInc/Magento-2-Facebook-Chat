@@ -7,14 +7,21 @@ use Magento\Store\Model\ScopeInterface;
 
 class Data extends AbstractHelper
 {
-    const XML_FB_MESSENGER_ENABLE = 'messenger/general/enable';
-    const XML_FB_APP_ID = 'messenger/general/app_id';
-    const XML_FB_PAGE_ID = 'messenger/general/page_id';
-    const XML_FB_COLOR = 'messenger/general/color_option';
-    const XML_FB_LOGIN_TEXT = 'messenger/general/login_message';
-    const XML_FB_LOGOUT_TEXT = 'messenger/general/logout_message';
+    public const XML_FB_MESSENGER_ENABLE = 'messenger/general/enable';
+    public const XML_FB_APP_ID = 'messenger/general/app_id';
+    public const XML_FB_PAGE_ID = 'messenger/general/page_id';
+    public const XML_FB_COLOR = 'messenger/general/color_option';
+    public const XML_FB_LOGIN_TEXT = 'messenger/general/login_message';
+    public const XML_FB_LOGOUT_TEXT = 'messenger/general/logout_message';
 
-    public function isEnable($storeId = null)
+    /**
+     * Check if module is enabled.
+     *
+     * @param mixed $storeId
+     *
+     * @return mixed
+     */
+    public function isEnable(mixed $storeId = null)
     {
         return $this->scopeConfig->getValue(
             self::XML_FB_MESSENGER_ENABLE,
@@ -23,35 +30,79 @@ class Data extends AbstractHelper
         );
     }
 
-    public function getFBAppId($storeId = null){
+    /**
+     * Get Facebook App ID.
+     *
+     * @param mixed $storeId
+     *
+     * @return mixed
+     */
+    public function getFBAppId(mixed $storeId = null)
+    {
         return $this->scopeConfig->getValue(
             self::XML_FB_APP_ID,
             ScopeInterface::SCOPE_STORE,
             $storeId
         );
     }
-    public function getFBPageId($storeId = null){
+
+    /**
+     * Get Facebook Page ID.
+     *
+     * @param mixed $storeId
+     *
+     * @return mixed
+     */
+    public function getFBPageId(mixed $storeId = null)
+    {
         return $this->scopeConfig->getValue(
             self::XML_FB_PAGE_ID,
             ScopeInterface::SCOPE_STORE,
             $storeId
         );
     }
-    public function getFBColor($storeId = null){
+
+    /**
+     * Get Facebook chat color.
+     *
+     * @param mixed $storeId
+     *
+     * @return mixed
+     */
+    public function getFBColor(mixed $storeId = null)
+    {
         return $this->scopeConfig->getValue(
             self::XML_FB_COLOR,
             ScopeInterface::SCOPE_STORE,
             $storeId
         );
     }
-    public function getFBLoginText($storeId = null){
+
+    /**
+     * Get Facebook login text.
+     *
+     * @param mixed $storeId
+     *
+     * @return mixed
+     */
+    public function getFBLoginText(mixed $storeId = null)
+    {
         return $this->scopeConfig->getValue(
             self::XML_FB_LOGIN_TEXT,
             ScopeInterface::SCOPE_STORE,
             $storeId
         );
     }
-    public function getFBLogoutText($storeId = null){
+
+    /**
+     * Get Facebook logout text.
+     *
+     * @param mixed $storeId
+     *
+     * @return mixed
+     */
+    public function getFBLogoutText(mixed $storeId = null)
+    {
         return $this->scopeConfig->getValue(
             self::XML_FB_LOGOUT_TEXT,
             ScopeInterface::SCOPE_STORE,
